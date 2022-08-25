@@ -24,6 +24,12 @@ that's component responsible for search to book using name of book or title, aut
 it handle search error like empty string or books with less information than required 
 ## shelf and book
 just for render ui and more composation
-
-
-
+## some image for cases 
+- regular input
+![error](/Images/Capture.PNG)
+- no matching result
+![error](/Images/2.PNG)
+- no image handler by filter
+![error] (/Images/3.PNG)
+- multiple words
+![error] (/Images/4.PNG)
