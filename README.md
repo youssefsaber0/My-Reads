@@ -13,23 +13,23 @@ This project was made to practice the concept of react js framework like
 - SearchBook
 - Shelf
 ## App 
-containig Router and books and it make connection with backend
+containing Router and books and it makes a connection with the backend
 ## Main
-contian main page of our app and the realtive path is "/" 
+contain main page of our app and the relative path is "/" 
 <br/>
-it have 3 book shelfs and it responsible to render ui after any change
+it has 3 bookshelves and it responsible to render UI after any change
 ## SearchBook
-that's component responsible for search to book using name of book or title, author, or ISBN 
+that's the component responsible for searching for the book using the name of the book or title, author, or ISBN 
 <br/>
-it handle search error like empty string or books with less information than required 
+it handles search errors like empty strings or books with less 
 ## shelf and book
-just for render ui and more composation
+just for render UI and more composition
 ## some image for cases 
 - regular input
 ![error](/Images/Capture.PNG)
 - no matching result
 ![error](/Images/2.PNG)
 - no image handler by filter
-![error] (/Images/3.PNG)
+![error](/Images/3.PNG)
 - multiple words
-![error] (/Images/4.PNG)
+![error](/Images/4.PNG)
