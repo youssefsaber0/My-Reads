@@ -1,7 +1,7 @@
 import Shelf from "./Shelf";
 import { Link } from "react-router-dom";
 
-const Main = ({books,render}) => {
+const Main = ({books,render,upDateShelf}) => {
     // console.log(render)
     return (   
  <div className="app">
@@ -13,9 +13,9 @@ const Main = ({books,render}) => {
           </div>
           <div className="list-books-content">
             <div>
-                <Shelf shelfName={"Currently Reading"} books={books} render={render}/>
-                <Shelf shelfName={"Want to Read"} books={books} render={render}/>
-                <Shelf shelfName={"Read"} books={books} render={render}/>
+                <Shelf shelfName={"Currently Reading"} books={books} render={render} upDateShelf={upDateShelf}/>
+                <Shelf shelfName={"Want to Read"} books={books} render={render} upDateShelf={upDateShelf}/>
+                <Shelf shelfName={"Read"} books={books} render={render} upDateShelf={upDateShelf}/>
             </div>
           </div>
           <div className="open-search">

@@ -1,23 +1,32 @@
 import { useEffect, useState } from "react";
 import * as BooksAPI from "../BooksAPI";
 
-const Book = ({book,setUpDate}) => {
+const Book = ({book,upDateShelf}) => {
     const [shelf,setShelf]=useState(book.shelf)
     // console.log(book)
     useEffect(() => {
         const checkShelf =  () => {
-            if(!shelf){
+          
+            if(book.shelf===undefined){
                 setShelf("none")
+                // console.log(book.shelf +" "+book.title)
+                return
             }
-            // console.log(shelf)
+             setShelf(book.shelf)
         };
     
         checkShelf();
-      }, [shelf]);
+      },[shelf,book]);
     const updateShelf=async (event)=>{
         // console.log(event.target.value)
+        upDateShelf(book,event.target.value)
+        book.shelf=event.target.value
+        // console.log(book.shelf)
+        setShelf(event.target.value)
         await BooksAPI.update(book,event.target.value);
-        setUpDate()
+        // setUpDate()
+
+        // console.log(event.target.value)
     }    
     return (
     <div className="book">
@@ -37,7 +46,7 @@ const Book = ({book,setUpDate}) => {
         }}
         value={shelf}
         >
-          <option value="none" disabled>
+          <option value="move" disabled>
             Move to...
           </option>
           <option value="currentlyReading">

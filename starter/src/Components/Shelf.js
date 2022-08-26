@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import Book from "./Book";
 
-const Shelf = ({shelfName,books,render}) => {
+const Shelf = ({shelfName,books,render,upDateShelf}) => {
     // console.log(render)
     const [shelfBooks,setShelfBooks]=useState([])
     const removeSpaces=(shelf)=>{
@@ -30,7 +30,7 @@ const Shelf = ({shelfName,books,render}) => {
         {
             shelfBooks.map(book=>(
                 <li key={book.id}>
-                    <Book book={book} setUpDate={render}/>
+                    <Book book={book} setUpDate={render} upDateShelf={upDateShelf}/>
                 </li>
             ))
         }

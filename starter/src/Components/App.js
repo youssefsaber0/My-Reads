@@ -17,6 +17,22 @@ function App() {
 
     getBooks();
   }, [upDate]);
+  const upDateShelf=(book,value)=>{
+    let result=books.filter(b=>b.id!==book.id)
+    // if(result.length===result.length)
+    // {
+    //   let newBook=Object.assign({}, book);
+    //   newBook.shelf=value
+    //   result=[...result,newBook]
+    // }
+    let newBook=Object.assign({}, book);
+    newBook.shelf=value
+    // console.log(value)
+    // console.log(newBook)
+    result=[...result,newBook]
+    setBooks(result)
+    // console.log(books)
+  }
   const reRender=()=>{
     setUpDate(!upDate)
     // console.log(upDate)
@@ -27,7 +43,7 @@ function App() {
         exact
         path="/"
         element={
-          <Main books={books} render={reRender}/>
+          <Main books={books} render={reRender} upDateShelf={upDateShelf}/>
         }
       />
       <Route
@@ -35,6 +51,8 @@ function App() {
         element={
           <SearchBook
           render={reRender}
+          upDateShelf={upDateShelf}
+          books={books}
           />
         }
       />
