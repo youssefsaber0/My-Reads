@@ -1,5 +1,11 @@
 # MyReads Project
-
+project to store books and Classified it to categories read and want to read and currently read
+<br />
+1- you can run it by clone from git <br/>
+2- navigate to starter<br/>
+3- run terminal and write "npm i"<br/>
+4- then write " npm run start"
+# MyReads Project practice
 This project was made to practice the concept of react js framework like
 - UI
 - state management
